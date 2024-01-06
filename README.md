@@ -41,7 +41,11 @@
 * ###### 개발자 동료와 소통한 결과 ```k8s(쿠버네티스)```와 ```docker-swarm``` 후보설정
 * ###### 소규모에 적합하고 모든 기능이 내장 되어있고 엄청난 장점을 지니고 있는 docker-swarm 이라는 오케스트레이션 툴을 적용하기로 사측에 제안
 
-### 이미지 넣기
+--------------------------------------
+
+<img src="https://github.com/khk37601/profile/blob/main/img/devops/docker.png" width="100%" height="30%">
+
+--------------------------------------
 
 #### 역할:
 * ###### docker, docker-compose, docker swarm 세팅 및 적용(기여도: 50%)
