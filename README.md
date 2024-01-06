@@ -61,3 +61,9 @@
 #### 사용한 기술
 <img src="https://img.shields.io/badge/NGINX-009639?style=for-the-badge&logo=NGINX&logoColor=white"> <img src="https://img.shields.io/badge/Docker-2496ED?style=for-the-badge&logo=Docker&logoColor=white"> 
 
+
+#### 그외
+[docker란](https://github.com/khk37601/Docker) [docker 적용기](https://github.com/khk37601/tech/blob/main/%EC%9A%B0%EB%8B%B9%ED%83%95%ED%83%95%EA%B0%9C%EB%B0%9C%20%EC%A0%81%EC%9A%A9%EA%B8%B0/docker/docker-swarm.md)
+
+
+
