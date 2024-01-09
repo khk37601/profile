@@ -31,7 +31,7 @@
 > Conect & 디퓨전랩
 1. 주요내용
    
-7. 사용기술
+4. 사용기술
    
 <img src="https://img.shields.io/badge/PHP-777BB4?style=for-the-badge&logo=PHP&logoColor=white">  <img src="https://img.shields.io/badge/Composer-885630?style=for-the-badge&logo=Composer&logoColor=white"> <img src="https://img.shields.io/badge/Apache-D22128?style=for-the-badge&logo=Apache&logoColor=white"> <img src="https://img.shields.io/badge/Docker-2496ED?style=for-the-badge&logo=Docker&logoColor=white"> <img src="https://img.shields.io/badge/MariaDB-003545?style=for-the-badge&logo=MariaDB&logoColor=white"> <img src="https://img.shields.io/badge/jQuery-0769AD?style=for-the-badge&logo=jQuery&logoColor=white"> 
 
@@ -41,7 +41,7 @@
 1. 주요내용
    
 
-7. 사용기술
+4. 사용기술
 
 <img src="https://img.shields.io/badge/PHP-777BB4?style=for-the-badge&logo=PHP&logoColor=white">  <img src="https://img.shields.io/badge/Composer-885630?style=for-the-badge&logo=Composer&logoColor=white"> <img src="https://img.shields.io/badge/Apache-D22128?style=for-the-badge&logo=Apache&logoColor=white"> <img src="https://img.shields.io/badge/Docker-2496ED?style=for-the-badge&logo=Docker&logoColor=white"> <img src="https://img.shields.io/badge/MariaDB-003545?style=for-the-badge&logo=MariaDB&logoColor=white"> <img src="https://img.shields.io/badge/jQuery-0769AD?style=for-the-badge&logo=jQuery&logoColor=white"> 
 
@@ -50,11 +50,23 @@
 ### 주문제안 서비스 개발
 > Conect & 디퓨전랩
 1. 주요내용
-   
+   * 자사 상품 이용하는 고객들의 재고 파익 및 주문제안 서비스  
 
-7. 사용기술
+2. 기여한점
+   * Back
+     * DB schema, entity, ERD 설계.
+     * Rest API 전반 설계.
+     * 고객들의 주문데이터 수집및 분석 (기여도: 50%)
+     * 재고파악 수식 도출(기여도: 30%)
+     * 남은재고, 사용수량, 미래 재고 계산 알고리즘 및 이메일 발송 구현
+    
+3. 결과/성과
+   * 고객 니즈 충족
+
+4. 사용기술
 
 <img src="https://img.shields.io/badge/Docker-2496ED?style=for-the-badge&logo=Docker&logoColor=white"> <img src="https://img.shields.io/badge/FastAPI-009688?style=for-the-badge&logo=FastAPI&logoColor=white"> <img src="https://img.shields.io/badge/MariaDB-003545?style=for-the-badge&logo=MariaDB&logoColor=white">
+
 
 ### EASYORDER
 ### 고객 간편주문 서비스 개발
@@ -79,12 +91,12 @@
      * 타사 관리시스템 주문등록 크롤러 전반 개발.
    * 페이지 개발 전반 진행.
 
-5. 결과/성과
+3. 결과/성과
    * 주문 체널을 다향성 증가. 
    * 자주 주문하던 상품만 보이도록 하여 고객의 만족도를 높힘.
    * CS 부서 당담직원 업무 부담 감소.
    
-7. 사용기술
+4. 사용기술
 
 <img src="https://img.shields.io/badge/NGINX-009639?style=for-the-badge&logo=NGINX&logoColor=white"> <img src="https://img.shields.io/badge/Docker-2496ED?style=for-the-badge&logo=Docker&logoColor=white"> <img src="https://img.shields.io/badge/FastAPI-009688?style=for-the-badge&logo=FastAPI&logoColor=white"> <img src="https://img.shields.io/badge/MariaDB-003545?style=for-the-badge&logo=MariaDB&logoColor=white"> <img src="https://img.shields.io/badge/vue.js-4FC08D?style=for-the-badge&logo=vue.js&logoColor=white"> <img src="https://img.shields.io/badge/puppeteer-40B5A4?style=for-the-badge&logo=puppeteer&logoColor=white"> <img src="https://img.shields.io/badge/koa-33333D?style=for-the-badge&logo=koa&logoColor=white">
 
