@@ -73,6 +73,62 @@ sudo ./svc.sh install ci-cd
 sudo ./svc.sh start
 ```
 
+```mermaid
+graph TD
+    A[Step 1: feat/ 브랜치 생성] --> B[Step 2: 기능 구현 및 로컬 개발]
+    B --> C[Step 3: 규칙 기반 자체 검증<br>규칙 위반 판별 스크립트 실행]
+    C --> D[Step 4: 커밋 및 PR 생성]
+    D --> E{GitHub Actions<br>commit-lint 실행}
+    E -- 위반 발견 ✕ --> F[PR 머지 차단 및 수정 요청]
+    F --> D
+    E -- 통과 ✓ --> G[Step 5: 판단 기반 코드 리뷰<br>설계/엣지 케이스 검증]
+    G --> H[Step 6: 리뷰 피드백 처리 및 반영]
+    H --> I[Step 7: dev/main 브랜치 Merge]
+
+    style C fill:#f5f5f7,stroke:#0066cc,stroke-width:2px
+    style E fill:#fafafc,stroke:#ff0000,stroke-width:2px
+    style I fill:#272729,stroke:#0066cc,stroke-width:2px,color:#fff
+```
+
+---
+
+### 2. CI/CD 배포 및 내부 Smoke Test 파이프라인
+코드가 push되었을 때 컨테이너 빌드부터 Docker Swarm 무중단 배포, 그리고 안전장치인 내부 스모크 테스트와 자동 롤백이 일어나는 인프라 흐름도입니다[cite: 2].
+
+```markdown
+
+```mermaid
+sequenceDiagram
+    autonumber
+    actor Developer as 개발자
+    participant GitHub as GitHub Repository
+    participant Actions as GitHub Actions Runner
+    participant GHCR as GitHub Packages (GHCR)
+    participant Swarm as 운영 서버 (Docker Swarm)
+
+    Developer->>GitHub: dev 브랜치에 코드 Push
+    GitHub->>Actions: 빌드/배포 워크플로우 트리거 (deploy-dev.yml)
+    Actions->>Actions: Docker Buildx 활용 멀티 서비스 이미지 빌드
+    Actions->>GHCR: 안전하게 인증 후 빌드 이미지 Push
+    Actions->>Swarm: SSH 연결 및 최신 이미지 Pull (with-registry-auth)
+    Actions->>Swarm: 5개 핵심 서비스 롤링 업데이트 수행 (App, Scheduler 등)
+    
+    Note over Swarm: 무중단 Rolling Update 실행
+    
+    Actions->>Swarm: [안전 장치] 컨테이너 내부 가동 검증 (Internal Smoke Test)
+    
+    alt curl http://localhost/up 정상 응답 (✓)
+        Swarm-->>Actions: OK (Exit 0)
+        Actions-->>Developer: 배포 성공 완료 알림
+    else 헬스체크 6회 실패 또는 타임아웃 (✕)
+        Swarm->>Swarm: Swarm 대피 자동 롤백 (Rollback 이전 버전)
+        Swarm-->>Actions: Fail (Exit 1)
+        Actions-->>Developer: 단계별 정밀 진단 로그 및 실패 알림
+    end
+
+```
+
+
 작성중..
 
 ## 🙇‍♂️ **Profile**
